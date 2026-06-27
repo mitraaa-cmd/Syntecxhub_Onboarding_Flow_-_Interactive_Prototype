@@ -9,6 +9,8 @@ Echo is a fictional app concept: a companion where you write letters, voice note
 
 Open `index.html` in any browser. On desktop it renders inside a phone-shaped frame (auto-scaled to fit your screen); on an actual mobile device it fills the full screen edge-to-edge.
 
+**live link**- https://syntecxhubonboardingprototype.vercel.app/
+
 ## Features
 
 - **5-screen flow**: Splash → Welcome → Personalization → Permissions → Success
