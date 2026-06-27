@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Echo — Future Self Companion · Onboarding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="device" id="device">
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+  <div class="confetti" id="confetti"></div>
+
+  <div class="progress-orbit" id="orbit">
+    <i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i>
+  </div>
+
+  <!-- 0 SPLASH -->
+  <section class="screen active" data-screen="0">
+    <div class="spacer"></div>
+    <div class="hero-orb"><div class="ring"></div><div class="core"></div></div>
+    <h1 style="text-align:center;font-size:28px;">Echo</h1>
+    <p class="sub" style="margin:0 auto;text-align:center;">A companion that listens to who you are becoming.</p>
+    <div class="spacer"></div>
+  </section>
+
+  <!-- 1 WELCOME -->
+  <section class="screen" data-screen="1">
+    <span class="badge">01 · Welcome</span>
+    <h1>Talk to the version<br>of you that's ahead.</h1>
+    <p class="sub">Echo turns your thoughts today into letters, voice notes, and check-ins from your future self — delivered when you need them most.</p>
+    <div class="spacer"></div>
+    <div class="hero-orb" style="width:120px;height:120px;"><div class="ring"></div><div class="core"></div></div>
+    <div class="spacer"></div>
+    <footer class="cta-row">
+      <button class="btn btn-primary" style="flex:1" data-next>Get started</button>
+    </footer>
+  </section>
+
+  <!-- 2 PERSONALIZATION -->
+  <section class="screen" data-screen="2">
+    <span class="badge">02 · Personalization</span>
+    <h1>Choose your vibe</h1>
+    <p class="sub">This tunes Echo's tone, color, and the kind of future messages you'll receive.</p>
+    <div class="vibe-grid" id="vibeGrid">
+      <button class="vibe-card" data-vibe="calm" data-accent="#7C8CFF" data-accent2="#5BD8C0">
+        <span class="glyph">🌊</span><span class="label">Calm</span>
+        <div class="desc">Gentle, reflective check-ins</div>
+      </button>
+      <button class="vibe-card" data-vibe="dreamy" data-accent="#C792EA" data-accent2="#FF9ECF">
+        <span class="glyph">🌙</span><span class="label">Dreamy</span>
+        <div class="desc">Poetic, imaginative letters</div>
+      </button>
+      <button class="vibe-card" data-vibe="energetic" data-accent="#FF8C6B" data-accent2="#FFD166">
+        <span class="glyph">⚡</span><span class="label">Energetic</span>
+        <div class="desc">Bold nudges, momentum</div>
+      </button>
+      <button class="vibe-card" data-vibe="creative" data-accent="#8C5BFF" data-accent2="#FF6BC5">
+        <span class="glyph">🎨</span><span class="label">Creative</span>
+        <div class="desc">Playful prompts, what-ifs</div>
+      </button>
+    </div>
+    <div class="spacer"></div>
+    <footer class="cta-row">
+      <button class="btn btn-ghost" data-skip>Skip</button>
+      <button class="btn btn-primary" style="flex:1" data-next disabled id="vibeNext">Continue</button>
+    </footer>
+  </section>
+
+  <!-- 3 PERMISSIONS -->
+  <section class="screen" data-screen="3">
+    <span class="badge">03 · Permissions</span>
+    <h1>One last thing</h1>
+    <p class="sub">Echo needs a little access to feel present at the right moments.</p>
+    <div class="perm-list">
+      <div class="perm-card" data-perm="notif">
+        <div class="perm-icon">🔔</div>
+        <div class="perm-text">
+          <div class="perm-title">Notifications</div>
+          <div class="perm-desc">So future-you can actually reach you</div>
+        </div>
+        <div class="toggle" data-toggle></div>
+        <span class="check-pop">✓</span>
+      </div>
+      <div class="perm-card" data-perm="loc">
+        <div class="perm-icon">📍</div>
+        <div class="perm-text">
+          <div class="perm-title">Location</div>
+          <div class="perm-desc">Letters that know where you are</div>
+        </div>
+        <div class="toggle" data-toggle></div>
+        <span class="check-pop">✓</span>
+      </div>
+      <div class="perm-card" data-perm="mic">
+        <div class="perm-icon">🎙️</div>
+        <div class="perm-text">
+          <div class="perm-title">Microphone</div>
+          <div class="perm-desc">Record voice notes to your future self</div>
+        </div>
+        <div class="toggle" data-toggle></div>
+        <span class="check-pop">✓</span>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <footer class="cta-row">
+      <button class="btn btn-ghost" data-skip>Not now</button>
+      <button class="btn btn-primary" style="flex:1" data-next>Continue</button>
+    </footer>
+  </section>
+
+  <!-- 4 SUCCESS / HOME -->
+  <section class="screen" data-screen="4">
+    <span class="badge" id="successBadge">04 · You're set</span>
+    <h1 id="successHeading">Echo is listening.</h1>
+    <p class="sub" id="successSub">Your first letter from the future arrives in 7 days.</p>
+    <div class="home-card">
+      <div style="font-size:13px;color:var(--text-dim);margin-bottom:6px;">Today's prompt</div>
+      <div style="font-size:15px;font-weight:600;line-height:1.4;">"What do you hope has changed by the time you read this?"</div>
+    </div>
+    <div class="spacer"></div>
+    <footer class="cta-row">
+      <button class="btn btn-primary" style="flex:1" id="enterHome">Enter Echo</button>
+    </footer>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
